@@ -1,0 +1,31 @@
+openapi: 3.0.0
+info:
+  title: RestAPI
+  version: 1.0.0
+  description: CRUD for Ticket
+servers:
+  - url: http://127.0.0.1:5000/
+paths:
+  /api/user/{id}:
+    summary: CRUD
+    description: CRUD
+    get:
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+          example: 1
+      responses:
+        '200':
+          description: Success
+        '400':
+          description: Bad Request
+        '404':
+          description: Not Found
+        '500':
+          description: Internal Server Error
+        
+        
+      
